@@ -1,0 +1,180 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+}
+
+/* General */
+body {
+  background: #73b54f;
+  border-radius: 36px;
+  box-shadow: 19px 19px 28px #598b3d, -19px -19px 28px #8ddf61;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background: #006241; /* Starbucks green */
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap; /* wrap for mobile */
+}
+
+.nav-btn {
+  display: inline-block;
+  background: #fff;
+  color: #006241;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: #004d31;
+  color: #fff;
+}
+
+header h2 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+/* Zig-Zag Layout */
+.zig {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin: 60px auto;
+  max-width: 1100px;
+  padding: 20px;
+}
+
+.zig img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+.zig .text {
+  flex: 1;
+}
+
+.zig h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #006241;
+}
+
+.zig p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Order Button */
+.order-btn {
+  display: block;
+  margin: 40px auto;
+  padding: 15px 30px;
+  background: #006241;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.order-btn:hover {
+  background: #004d31;
+}
+
+h3 {
+  text-align: center;
+  padding: 0 15px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #333;
+  color: #fff;
+  padding: 15px;
+  margin-top: 50px;
+}
+
+/* ---------------- */
+/* Responsive Design */
+/* ---------------- */
+@media (max-width: 768px) {
+  .zig {
+    flex-direction: column; /* stack on mobile */
+    text-align: center;
+  }
+
+  .zig:nth-child(even) {
+    flex-direction: column; /* prevent flip issue */
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header h2 {
+    font-size: 1.2rem;
+  }
+
+  .nav-btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .order-btn {
+    width: 80%;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .zig h2 {
+    font-size: 1.4rem;
+  }
+
+  .zig p {
+    font-size: 0.9rem;
+  }
+
+  .order-btn {
+    width: 90%;
+    padding: 12px 20px;
+  }
+}

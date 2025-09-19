@@ -1,0 +1,90 @@
+/* ===== Menu Page CSS - GreenBites Inspired ===== */
+
+/* Page container */
+body {
+    font-family: 'Arial', sans-serif;
+    border-radius: 36px;
+    background: #73b54f;
+
+}
+
+#Menu {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Page Title */
+#Menu h2 {
+    grid-column: 1 / -1; /* span full width */
+    text-align: center;
+    color: #006241; /* GreenBites green */
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+/* Menu item cards */
+#Menu div {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#Menu div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Dish name */
+#Menu div h3 {
+    color: #004d31;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+/* Price */
+#Menu div p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Dish image */
+#Menu div img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* Back link */
+p a {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    color: #006241;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+#Menu a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    #Menu {
+        grid-template-columns: 1fr;
+    }
+}
